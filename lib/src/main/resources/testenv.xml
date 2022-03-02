@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE logback>
+<included>
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <!-- 環境変数の実習 -->
+      <pattern>Printed by ${LOGGER_NAME} ${OS:-MacOS11.6.1}%n</pattern>
+      <pattern>%-7([%p])[%d][%c#%t:L%line] %m%n</pattern>
+    </encoder>
+  </appender>
+</included>

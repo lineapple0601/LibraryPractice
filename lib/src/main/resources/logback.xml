@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE logback>
+<configuration>
+  <property name="LOGGER_NAME" value="logback" />
+  
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <!-- ログ出力の形式 -->
+      <pattern>%-7([%p])[%d][%c#%t:L%line] %m%n</pattern>
+    </encoder>
+  </appender>
+
+  <!-- 他のXMLファイルをIncludeする -->
+  <include resource="testenv.xml" />
+  
+  <root>
+    <appender-ref ref="STDOUT" />
+  </root>
+</configuration>
